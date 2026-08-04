@@ -37,7 +37,7 @@ Subscription
 
 Created a Resource Group named **RG-IT-Prod** in the South Africa North region.
 
-![RG Created](Lab-01-Resource-Groups/images/01-resource-group-created.png)
+![RG Created](images/01-resource-group-created.png)
 
 ---
 
