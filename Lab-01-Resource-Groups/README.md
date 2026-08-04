@@ -121,7 +121,7 @@ Waited for the Storage Account provisioning/replication update to finish, then r
 
 ### Observation
 
-Attempting to delete a Resource Group can fail if one of its resources has a pending management operation (such as changing Storage Account redundancy). Azure rolls back the Resource Group deletion until the operation completes.
+Attempting to delete a Resource Group can fail if one of its resources has a pending management operation (such as changing Storage Account redundancy). Azure rolls back the Resource Group deletion until the operation completes. Later, after changing the redundancy back to **RA-GRS**, the Resource Group deletion succeeded. Although this appeared to resolve the issue, it is more likely that Azure had completed the previous backend replication operation by that time. This suggests the successful deletion was related to the completion of the pending management operation rather than the redundancy change itself.
 
 ---
 
