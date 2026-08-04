@@ -46,15 +46,25 @@ This repository will cover:
 | Lab | Status | Description |
 |------|:------:|-------------|
 | [Lab 01 – Resource Groups](Lab-01-Resource-Groups/) | ✅ | Create Resource Groups, apply tags, move resources, and understand Resource Group organization. |
-| Lab 02 – Virtual Networks | 🚧 Planned | Deploy VNets and Subnets. |
-| Lab 03 – Network Security Groups | 🚧 Planned | Configure inbound and outbound security rules. |
-| Lab 04 – Linux Virtual Machine | 🚧 Planned | Deploy and connect to a Linux VM using SSH. |
-| Lab 05 – Azure Bastion | 🚧 Planned | Secure VM administration without a public IP. |
-| Lab 06 – Storage Accounts | 🚧 Planned | Explore Blob Storage, File Shares, and redundancy options. |
-| Lab 07 – Recovery Services Vault | 🚧 Planned | Protect Azure VMs using Azure Backup. |
-| Lab 08 – VNet Peering | 🚧 Planned | Connect Virtual Networks securely. |
-| Lab 09 – Azure Load Balancer | 🚧 Planned | Configure Layer 4 load balancing. |
-| Lab 10 – Azure RBAC | 🚧 Planned | Implement role-based access control. |
+| Lab 02 – Virtual Networks | 🚧 Planned | Create VNets, configure address spaces, design subnets, and understand Azure networking fundamentals. |
+| Lab 03 – Linux Virtual Machine | 🚧 Planned | Deploy a Linux VM, configure networking, connect via SSH, and explore VM components. |
+| Lab 04 – Network Security Groups | 🚧 Planned | Secure VM traffic using inbound and outbound NSG rules and understand rule evaluation. |
+| Lab 05 – Azure Bastion | 🚧 Planned | Securely administer Linux and Windows VMs without exposing RDP or SSH to the Internet. |
+| Lab 06 – VNet Peering | 🚧 Planned | Connect two Virtual Networks, verify communication, and understand peering limitations. |
+| Lab 07 – Storage Accounts | 🚧 Planned | Deploy Storage Accounts, configure redundancy, explore Blob Storage, Azure Files, and SAS tokens. |
+| Lab 08 – Managed Disks & Snapshots | 🚧 Planned | Create managed disks, attach data disks, create snapshots, and compare snapshots with Azure Backup. |
+| Lab 09 – Recovery Services Vault & Azure Backup | 🚧 Planned | Configure Azure Backup, create recovery points, and restore protected resources. |
+| Lab 10 – Availability Sets & Availability Zones | 🚧 Planned | Deploy highly available VMs and understand fault domains, update domains, and zones. |
+| Lab 11 – Azure Load Balancer | 🚧 Planned | Configure a Layer 4 Load Balancer, backend pools, health probes, and balancing rules. |
+| Lab 12 – Azure Application Gateway | 🚧 Planned | Deploy an Application Gateway, configure listeners, routing rules, and optionally enable WAF. |
+| Lab 13 – Azure RBAC | 🚧 Planned | Assign built-in roles, test permissions, and understand Azure authorization. |
+| Lab 14 – Azure Policy & Resource Locks | 🚧 Planned | Enforce governance with Azure Policy and protect resources using locks. |
+| Lab 15 – Azure Key Vault | 🚧 Planned | Store secrets, certificates, and keys, and manage secure access. |
+| Lab 16 – Managed Identities | 🚧 Planned | Enable managed identities and securely access Azure resources without storing credentials. |
+| Lab 17 – Azure Monitor & Alerts | 🚧 Planned | Configure monitoring, metrics, activity logs, Log Analytics, and alert rules. |
+| Lab 18 – VM Scale Sets | 🚧 Planned | Deploy VM Scale Sets and configure autoscaling based on demand. |
+| Lab 19 – Azure CLI & PowerShell Automation | 🚧 Planned | Deploy and manage Azure resources using Azure CLI and PowerShell. |
+| Lab 20 – Bicep Infrastructure as Code | 🚧 Planned | Deploy Azure infrastructure using reusable Bicep templates. |
 | *(More labs will be added as the repository grows.)* | | |
 
 ---
