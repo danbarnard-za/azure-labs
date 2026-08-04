@@ -28,7 +28,11 @@ _To be added._
 
 ## Lessons Learned
 
-_To be added._
+Issue - Resource Group deletion failed with ResourceGroupDeletionBlocked and PendingTransactionAlreadyExists.
+Cause - The Storage Account redundancy had just been changed from RA-GRS to LRS, triggering a backend geo-replication update. Azure blocked deletion until that operation completed.
+Resolution - Waited for the Storage Account provisioning/replication update to finish, then retried the Resource Group deletion successfully.
+Observation: Attempting to delete a Resource Group can fail if one of its resources has a pending management operation (such as changing Storage Account redundancy). Azure rolls back the Resource Group deletion until the operation completes.
+
 
 ## Troubleshooting
 
