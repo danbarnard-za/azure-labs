@@ -2,7 +2,7 @@
 
 ## Objective
 
-Learn how to create, manage and organize Azure resources using Resource Groups.
+The objective of this lab was to understand how Azure Resource Groups are used to logically organize resources, apply metadata using tags, move resources between Resource Groups, and safely remove resources from Azure.
 
 ## Technologies
 
@@ -24,9 +24,10 @@ Learn how to create, manage and organize Azure resources using Resource Groups.
 Subscription
 │
 ├── RG-IT-Prod
-│     └── Storage Account
 │
 └── RG-IT-Test
+      │
+      └── Storage Account
 ```
 
 
@@ -47,7 +48,7 @@ Created a Resource Group named **RG-IT-Prod** in the South Africa North region.
 
 ### Step 2 – Create Storage Account
 
-Created a Standard Storage Account inside **RG-IT-Prod**.
+Created a Standard General-purpose v2 Storage Account using RA-GRS redundancy inside RG-IT-Prod.
 
 
 ---
@@ -138,3 +139,12 @@ Attempting to delete a Resource Group can fail if one of its resources has a pen
 - Azure management operations are often **asynchronous**. Even after an operation appears complete in the Azure portal, backend processing may still be occurring.
 - Azure blocks certain management operations, such as deleting a Resource Group, while a contained resource has a pending operation (e.g., changing Storage Account redundancy).
 - The error `PendingTransactionAlreadyExists` indicates that Azure is still processing a previous management operation and the requested action should be retried once it completes.
+
+
+## References
+
+- Microsoft Learn
+- Azure Documentation
+- Relevant Microsoft Docs articles
+
+---
