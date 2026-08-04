@@ -31,6 +31,57 @@ Subscription
 
 ---
 
+## Lab Steps
+
+### Step 1 – Create Resource Group
+
+Created a Resource Group named **RG-IT-Prod** in the South Africa North region.
+
+![RG Created](images/Creating-a-Resource-Group.png)
+
+---
+
+### Step 2 – Create Storage Account
+
+Created a Standard Storage Account inside **RG-IT-Prod**.
+
+![Storage Account](images/02-storage-account.png)
+
+---
+
+### Step 3 – Apply Tags
+
+Applied the following tags:
+
+| Tag | Value |
+|-----|-------|
+| Environment | Production |
+| Department | IT |
+| Owner | Dan |
+
+![Tags](images/03-tags.png)
+
+---
+
+### Step 4 – Move Resource
+
+Moved the Storage Account from **RG-IT-Prod** to **RG-IT-Test**.
+
+![Move](images/04-move-resource.png)
+
+---
+
+### Step 5 – Delete Resource Groups
+
+Deleted **RG-IT-Prod**.
+
+Attempted to delete **RG-IT-Test**.
+
+Azure initially prevented deletion because the Storage Account had a pending geo-redundancy change.
+
+---
+
+
 ## Screenshots
 
 _To be added._
