@@ -20,7 +20,16 @@ Learn how to create, manage and organize Azure resources using Resource Groups.
 
 ## Architecture
 
-_To be added._
+```text
+Subscription
+│
+├── RG-IT-Prod
+│     └── Storage Account
+│
+└── RG-IT-Test
+```
+
+---
 
 ## Screenshots
 
