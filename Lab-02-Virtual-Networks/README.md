@@ -1,6 +1,6 @@
 # Lab 02 – Virtual Networks
 
-## Objective
+## 🎯Objective
 
 Learn how to create and configure Azure Virtual Networks (VNets), design address spaces and subnets, and understand how Azure resources communicate within a private network.
 
@@ -34,7 +34,7 @@ Learn how to create and configure Azure Virtual Networks (VNets), design address
 
 ---
 
-## Architecture
+## 🏗️Architecture
 
 ```text
 Subscription
@@ -74,6 +74,12 @@ Created a Virtual Network named **VNet-Production** with an Address Space of **1
 
 ![Step 2](images/02-Create-Vnet-Review.png)
 
+### 💡Interesting Observation
+
+Although the Address Space **10.0.0.0/16** contains **65,536 IP addresses**, Azure reserves **five IP addresses** in every subnet for internal networking functions. These reserved addresses cannot be assigned to Azure resources.
+
+For example, a subnet with the prefix **10.0.1.0/24** contains **256 IP addresses**, but only **251** are available for use because Azure reserves five addresses.
+
 ---
 
 ## Step 3 – Create Subnets
@@ -89,7 +95,7 @@ Created the following subnets:
 
 ![Step 3](images/04-Subnets.png)
 
-### Interesting Observation
+### 💡Interesting Observation
 
 While adding a subnet, Azure provides a predefined option for **Azure Bastion**. Selecting this option automatically:
 
@@ -112,7 +118,7 @@ Reviewed the Virtual Network configuration including:
 
 ---
 
-# Experiments
+# 🧪Experiments
 
 ## Experiment 1 – Duplicate Subnet
 
@@ -122,7 +128,7 @@ Attempted to create another subnet using the existing prefix:
 
 ### Observation
 
-Azure rejected the configuration because subnet address ranges cannot overlap within the same Virtual Network.
+❌ Azure rejected the configuration because subnet address ranges cannot overlap within the same Virtual Network.
 
 ![Experiment 1](images/04-Experiment1.png)
 
@@ -136,13 +142,13 @@ Attempted to create a subnet using:
 
 ### Observation
 
-Azure did not allow a **/15** subnet because it would exceed the Virtual Network's **10.0.0.0/16** Address Space. The **/15** prefix was not available for selection in the Azure Portal.
-
-![Experiment 2](images/05-Experiment2.png)
+❌ Azure did not allow a **/15** subnet because it would exceed the Virtual Network's **10.0.0.0/16** Address Space. The **/15** prefix was not available for selection in the Azure Portal.
 
 ### Lesson Learned
 
 A subnet must always fit completely within the Virtual Network Address Space and cannot be larger than the VNet itself.
+
+![Experiment 2](images/05-Experiment2.png)
 
 ---
 
@@ -155,7 +161,7 @@ Attempted to reduce the Address Space from:
 
 ### Observation
 
-Azure rejected the change because the existing subnets no longer fit within the proposed Address Space. Azure validates that every subnet remains within the Virtual Network Address Space before allowing changes.
+❌ Azure rejected the change because the existing subnets no longer fit within the proposed Address Space. Azure validates that every subnet remains within the Virtual Network Address Space before allowing changes.
 
 The Address Space was then changed to:
 
@@ -178,14 +184,14 @@ Deleted the **Backend** subnet and recreated it using a different Address Prefix
 
 ### Observation
 
-Azure successfully created the subnet because the new Address Prefix:
+✅ Azure successfully created the subnet because the new Address Prefix:
 
 - Was contained within the VNet Address Space.
 - Did not overlap with any existing subnet.
 
 ---
 
-## Lessons Learned
+## 📚Lessons Learned
 
 - A Virtual Network provides private network connectivity for Azure resources.
 - A VNet can contain multiple subnets.
