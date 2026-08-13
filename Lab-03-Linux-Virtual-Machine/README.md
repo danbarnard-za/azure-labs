@@ -68,6 +68,7 @@ Subscription
       │
       └── Other subnets from Lab 02
 ```
+
 ---
 
 # 🚀 Lab Steps
@@ -90,8 +91,6 @@ The originally planned Standard_B1s VM size was unavailable in the selected regi
 
 This demonstrated that VM SKU availability can vary depending on the Azure region and subscription.
 
----
-
 ## Step 2 – Explore VM Resources
 
 After deployment, the VM was inspected along with the resources associated with it.
@@ -105,8 +104,6 @@ The following resources were identified:
 - Network Security Group
 - Managed OS Disk
 - SSH Key
-
----
 
 ## Step 3 – Explore the Network Interface
 
@@ -123,8 +120,6 @@ The VM's private IP was assigned from the 10.0.1.0/24 subnet.
 
 ![Step 3](images/03-Network-Interface.png)
 
----
-
 ## Step 4 – Explore the Public IP
 
 Inspected the Public IP associated with LinuxVM01.
@@ -133,8 +128,6 @@ The Public IP was used to provide external connectivity to the VM and was used f
 
 ![Step 4](images/05-Public-IP.png)
 
----
-
 ## Step 5 – Explore the Managed Disk
 
 Inspected the managed OS disk attached to the VM.
@@ -142,8 +135,6 @@ Inspected the managed OS disk attached to the VM.
 The managed disk provides persistent storage for the VM's operating system.
 
 ![Step 5](images/04-Disk.png)
-
----
 
 ## Step 6 – Connect Using SSH
 
@@ -179,35 +170,33 @@ Providing the private key explicitly with the -i parameter allowed the connectio
 
 ![Step 6](images/07-Cloud-Shell-SSH.png)
 
----
-
 ## Step 7 – Linux Command-Line Tests
 
 After connecting to the VM, several commands were used to verify the Linux environment.
 
-## Check hostname 
+### Check hostname 
 
 ![Step 7](images/08-Hostname.png)
 
 
-## Check network interfaces
+### Check network interfaces
 
 ![Step 7](images/09-ip-addr.png)
 
 
-## Check disk layout
+### Check disk layout
 
 ![Step 7](images/11-lsblk.png)
 
 
-## Check filesystem usage
+### Check filesystem usage
 
 ![Step 7](images/10-df-h.png)
 
-These commands verified the VM's networking configuration, storage, and Internet connectivity.
+
+These commands verified the VM's hostname, networking configuration, and storage.
 
 ---
-
 
 # 🧪 Experiments
 
@@ -227,8 +216,6 @@ A VM in a Stopped (deallocated) state no longer incurs compute charges, but asso
 
 ![image](images/12-Stop-Deallocate-VM.png)
 
----
-
 ## Experiment 2 – Shut Down the VM from Linux
 
 After restarting the VM, it was shut down from inside the operating system via cloud shell using:
@@ -247,8 +234,6 @@ Stopping a VM from inside the operating system is different from Azure deallocat
 For cost savings, the VM should be Stopped (deallocated) so that compute resources are released.
 
 ![image](images/13-Stop-VM.png)
-
----
 
 ## Experiment 3 – Resize the VM
 
@@ -276,12 +261,9 @@ The resize was subsequently completed successfully after the restart.
 
 The VM could be resized without an additional restart when it was already stopped. When the VM was running, Azure required a restart to apply the new VM size.
 
-
 ### Lesson Learned
 
 VM sizes can be changed after deployment. Depending on the circumstances, resizing a running VM may require a restart.
-
----
 
 ## Experiment 4 – Test Network Interface Dependency
 
@@ -291,13 +273,11 @@ Attempted to delete the Network Interface while LinuxVM01 still existed.
 
 Azure prevented the deletion because the Network Interface was still associated with the VM.
 
-![image](images/17-Failed-Delete-NIC.png)
-
 ### Lesson Learned
 
 Azure enforces resource dependencies. A Network Interface that is still attached to a VM cannot be independently deleted.
 
----
+![image](images/17-Failed-Delete-NIC.png)
 
 ## Experiment 5 – Delete the Virtual Machine
 
@@ -331,6 +311,7 @@ This is important for cost management, as unused resources such as Public IP add
 
 ---
 
+
 # 🛠️ Troubleshooting
 
 ## SSH Authentication Failure
@@ -362,6 +343,7 @@ The private key permissions were also restricted using:
 ```bash
 chmod 600 ~/LinuxVM01-key.pem
 ```
+---
 
 # 📚 Lessons Learned
 
@@ -382,10 +364,20 @@ chmod 600 ~/LinuxVM01-key.pem
 - Deleting a VM does not necessarily delete all associated resources.
 - Remaining resources should be reviewed after deleting temporary lab infrastructure to avoid unnecessary costs.
 
+---
+
 # 💰 Cost Considerations
 
 The VM used a **Standard_D2s_v3** size because the planned **B1s** size was unavailable.
 The VM was stopped/deallocated after testing to avoid ongoing compute charges.
 Associated resources should also be reviewed and removed when they are no longer required.
 
+---
+
+# 🔗 References
+- [Microsoft Learn – Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/)
+- [Microsoft Learn – Create a Linux Virtual Machine in Azure](https://learn.microsoft.com/azure/virtual-machines/linux/quick-create-portal)
+- [Microsoft Learn – Azure Virtual Machine Sizes](https://learn.microsoft.com/azure/virtual-machines/sizes/overview)
+- [Microsoft Learn – Azure Virtual Machine States and Billing](https://learn.microsoft.com/azure/virtual-machines/states-billing)
+- [Microsoft Learn – Connect to a Linux VM using SSH](https://learn.microsoft.com/azure/virtual-machines/linux-vm-connect)
 
