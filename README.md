@@ -47,7 +47,7 @@ This repository will cover:
 |------|:------:|-------------|
 | [Lab 01 – Resource Groups](Lab-01-Resource-Groups/) | ✅ | Create Resource Groups, apply tags, move resources, and understand Resource Group organization. |
 | [Lab 02 – Virtual Networks](Lab-02-Virtual-Networks/) | ✅ | Create VNets, configure address spaces, design subnets, and understand Azure networking fundamentals. |
-| [Lab 02 – Linux Virtual Machine](Lab-03-Linux-Virtual-Machine/) | ✅ | Deploy a Linux VM, configure networking, connect via SSH, and explore VM components. |
+| [Lab 03 – Linux Virtual Machine](Lab-03-Linux-Virtual-Machine/) | ✅ | Deploy a Linux VM, configure networking, connect via SSH, and explore VM components. |
 | Lab 04 – Network Security Groups | 🚧 Planned | Secure VM traffic using inbound and outbound NSG rules and understand rule evaluation. |
 | Lab 05 – Azure Bastion | 🚧 Planned | Securely administer Linux and Windows VMs without exposing RDP or SSH to the Internet. |
 | Lab 06 – VNet Peering | 🚧 Planned | Connect two Virtual Networks, verify communication, and understand peering limitations. |
