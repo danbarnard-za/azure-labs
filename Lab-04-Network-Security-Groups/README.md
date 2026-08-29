@@ -285,18 +285,6 @@ was unsuccessful after the NSG deny rule was applied.
 
 The application can be running successfully on the VM while network traffic to the application's port is still blocked by an NSG.
 
-```text
-Internet
-    │
-    │ TCP/80
-    ▼
-   NSG
-    │
-    └── ❌ Deny
-         │
-       Nginx
-```
-
 ![HTTP Blocked](images/13-HTTP-Blocked.png)
 
 ---
