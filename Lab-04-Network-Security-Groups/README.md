@@ -343,7 +343,7 @@ An outbound NSG rule was created to deny HTTPS traffic.
 The following command was used to test outbound HTTPS connectivity:
 
 ```bash
-curl -s -o /dev/null -w "HTTPS connection successful. HTTP status: %{http_code}\n" https://www.microsoft.com
+curl -I https://www.microsoft.com
 ```
 
 ### Observation
