@@ -97,7 +97,7 @@ Reviewed:
 Before making any changes to the NSG, SSH connectivity to the Linux VM was tested.
 
 ```bash
-ssh -i ~/LinuxVM01-key.pem azureuser@<Public-IP>
+ssh -i ~/LinuxVM01-key.pem azureuser@20.87.27.229
 ```
 
 ### Observation
@@ -136,7 +136,7 @@ Attempting to connect to the VM using SSH no longer established a connection.
 The SSH client waited and eventually timed out.
 
 ```text
-ssh: connect to host <Public-IP> port 22: Connection timed out
+ssh: connect to host 20.87.27.229 port 22: Connection timed out
 ```
 
 ### 💡 Interesting Observation
@@ -276,7 +276,7 @@ An inbound NSG rule was then created to deny HTTP traffic.
 The Nginx service was running on the VM, but accessing:
 
 ```text
-http://<Public-IP>
+http://20.87.27.229
 ```
 
 was unsuccessful after the NSG deny rule was applied.
@@ -318,7 +318,7 @@ The NSG rule was changed to allow HTTP traffic on TCP port 80.
 The Nginx page became accessible through:
 
 ```text
-http://<Public-IP>
+http://20.87.27.229
 ```
 
 This confirmed that the NSG was controlling access to the HTTP service.
