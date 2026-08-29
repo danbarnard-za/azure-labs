@@ -256,6 +256,8 @@ sudo apt install nginx -y
 
 The Nginx service was verified before applying the NSG rule.
 
+![Nginx Running](images/11-Nginx-Running.png)
+
 An inbound NSG rule was then created to deny HTTP traffic.
 
 | Setting | Value |
@@ -266,8 +268,6 @@ An inbound NSG rule was then created to deny HTTP traffic.
 | Action | Deny |
 | Priority | `110` |
 | Name | Deny-HTTP |
-
-![Nginx Running](images/11-Nginx-Running.png)
 
 ![Deny HTTP](images/12-Deny-HTTP.png)
 
