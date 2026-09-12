@@ -96,7 +96,7 @@ Before Azure Bastion, the VM required direct SSH connectivity through its Public
 
 Azure Bastion provides an alternative method of administration by connecting to the VM through its private IP address.
 
-![VM Configuration](images/01-VM-Networking-Before-Bastion.png)
+![VMConfiguration](images/01-VM-Networking-Before-Bastion.png)
 
 ---
 
@@ -124,7 +124,6 @@ This subnet cannot be used for normal Virtual Machine deployments.
 
 The `/26` prefix provides sufficient address space for the Bastion deployment used in this lab.
 
-![BastionSubnetConfig](images/02-AzureBastionSubnet.png)
 
 ---
 
@@ -160,8 +159,6 @@ LinuxVM01
 ```
 
 This allows the VM to be administered without exposing SSH directly to the Internet.
-
-![BastionConfig](03-Bastion-Configuration.png)
 
 ---
 
