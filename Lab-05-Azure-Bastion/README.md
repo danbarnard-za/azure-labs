@@ -124,6 +124,8 @@ This subnet cannot be used for normal Virtual Machine deployments.
 
 The `/26` prefix provides sufficient address space for the Bastion deployment used in this lab.
 
+![BastionSubnetConfig](images/02-AzureBastionSubnet.png)
+
 ---
 
 ## Step 3 – Deploy Azure Bastion
@@ -158,6 +160,8 @@ LinuxVM01
 ```
 
 This allows the VM to be administered without exposing SSH directly to the Internet.
+
+![BastionConfig](03-Bastion-Configuration.png)
 
 ---
 
