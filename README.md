@@ -49,7 +49,7 @@ This repository will cover:
 | [Lab 02 – Virtual Networks](Lab-02-Virtual-Networks/) | ✅ | Create VNets, configure address spaces, design subnets, and understand Azure networking fundamentals. |
 | [Lab 03 – Linux Virtual Machine](Lab-03-Linux-Virtual-Machine/) | ✅ | Deploy a Linux VM, configure networking, connect via SSH, and explore VM components. |
 | [Lab 04 – Network Security Groups](Lab-04-Network-Security-Groups/) | ✅ | Secure VM traffic using inbound and outbound NSG rules and understand rule evaluation. |
-| Lab 05 – Azure Bastion | 🚧 Planned | Securely administer Linux and Windows VMs without exposing RDP or SSH to the Internet. |
+| [Lab 05 – Azure Bastion](Lab-05-Azure-Bastion/) | ✅ | Securely administer Linux and Windows VMs without exposing RDP or SSH to the Internet. |
 | Lab 06 – VNet Peering | 🚧 Planned | Connect two Virtual Networks, verify communication, and understand peering limitations. |
 | Lab 07 – Storage Accounts | 🚧 Planned | Deploy Storage Accounts, configure redundancy, explore Blob Storage, Azure Files, and SAS tokens. |
 | Lab 08 – Managed Disks & Snapshots | 🚧 Planned | Create managed disks, attach data disks, create snapshots, and compare snapshots with Azure Backup. |
