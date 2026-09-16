@@ -180,13 +180,13 @@ The following configuration areas were explored:
 - IP configuration
 - Connection options
 
+![BastionOverview](images/05-Bastion-Overview.png)
+
 ### 💡 Interesting Observation
 
 Azure Bastion is deployed as a dedicated Azure service inside the Virtual Network.
 
 The Bastion resource uses its own Public IP for connectivity to the Azure Portal while communicating with Virtual Machines privately inside the Virtual Network.
-
-![BastionOverview](images/05-Bastion-Overview.png)
 
 ---
 
