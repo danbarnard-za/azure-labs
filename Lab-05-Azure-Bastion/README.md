@@ -115,6 +115,7 @@ The subnet used in this lab was:
 ```text
 10.0.10.0/26
 ```
+![Bastion Subnet](images/02-AzureBastionSubnet.png)
 
 ### 💡 Interesting Observation
 
@@ -138,6 +139,8 @@ The Bastion resource was configured using:
 - **Subnet:** AzureBastionSubnet
 - **Region:** South Africa North
 
+![BastionConfig](images/03-Bastion-Configuration.png)
+
 Azure Bastion also required a Public IP address.
 
 ### 💡 Important Observation
@@ -160,6 +163,8 @@ LinuxVM01
 
 This allows the VM to be administered without exposing SSH directly to the Internet.
 
+![BastionReview](images/04-Bastion-Review.png)
+
 ---
 
 ## Step 4 – Explore the Azure Bastion Resource
@@ -181,6 +186,8 @@ Azure Bastion is deployed as a dedicated Azure service inside the Virtual Networ
 
 The Bastion resource uses its own Public IP for connectivity to the Azure Portal while communicating with Virtual Machines privately inside the Virtual Network.
 
+![BastionOverview](images/05-Bastion-Overview.png)
+
 ---
 
 # 🧪 Experiments
@@ -194,6 +201,8 @@ The connection was configured using:
 - **Username:** azureuser
 - **Authentication:** SSH Private Key
 - **Private Key:** Matching `.pem` private key
+
+![BastionSSHSetup](images/06-Bastion-SSH-Connection.png)
 
 Azure Bastion opened an SSH session directly in the browser.
 
@@ -219,6 +228,8 @@ The following commands were used:
 ip -4 addr
 hostname
 ```
+
+![BastionPrivateConnection](images/10-Bastion-Private-Connection.png)
 
 The results confirmed:
 
@@ -263,7 +274,10 @@ The VM retained its private IP address:
 10.0.1.4
 ```
 
+
 The VM no longer had a Public IP address assigned.
+
+![VMNoPublicIP](images/07-VM-No-Public-IP.png)
 
 ### Observation
 
@@ -284,6 +298,8 @@ This reduces the VM's exposure to the Internet.
 After removing the VM's Public IP address, attempted another connection through Azure Bastion.
 
 The connection was successful.
+
+![BastionConnectWithoutPublicIP](images/08-Bastion-No-Public-IP.png)
 
 ### Observation
 
@@ -320,6 +336,8 @@ The VM can remain private while still being securely administered.
 ## Experiment 5 – Test Direct SSH Connectivity
 
 After removing the VM's Public IP address, direct SSH connectivity was tested.
+
+![DirectSSHTest](images/09-Direct-SSH-Failed.png)
 
 ### Observation
 
@@ -367,11 +385,7 @@ Reviewed the inbound security rules associated with the Virtual Machine.
 
 The following default rules were present:
 
-| Priority | Rule | Source | Destination | Action |
-|----------|------|--------|-------------|--------|
-| 65000 | AllowVnetInBound | VirtualNetwork | VirtualNetwork | Allow |
-| 65001 | AllowAzureLoadBalancerInBound | AzureLoadBalancer | Any | Allow |
-| 65500 | DenyAllInBound | Any | Any | Deny |
+![NSGRules](images/11-NSG-Bastion-Rules.png)
 
 ### Observation
 
