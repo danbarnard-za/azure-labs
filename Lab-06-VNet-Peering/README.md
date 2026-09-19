@@ -544,3 +544,12 @@ A timeout generally indicates that the connection is not successfully reaching t
 - VNet Peering itself has no basic hourly charge, but data transferred across the peering can incur charges.
 - VNets and subnets themselves do not incur a basic usage charge.
 - Resources deployed inside the VNets, particularly VMs, can generate ongoing costs.
+
+# References
+
+- [Microsoft Learn – Azure Virtual Network Peering](https://learn.microsoft.com/azure/virtual-network/virtual-network-peering-overview)
+- [Microsoft Learn – Create, change, or delete an Azure virtual network peering](https://learn.microsoft.com/azure/virtual-network/virtual-network-manage-peering)
+- [Microsoft Learn – Azure Virtual Network documentation](https://learn.microsoft.com/azure/virtual-network/)
+- [Microsoft Learn – Network Security Groups](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview)
+- [Microsoft Azure – Virtual Network Pricing](https://azure.microsoft.com/pricing/details/virtual-network/)
+
