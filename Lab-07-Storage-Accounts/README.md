@@ -311,7 +311,7 @@ The uploaded object was stored as a Block Blob.
 | Lease Status | Unlocked |
 | Lease State | Available |
 
-![Uploaded-Blob](images/9-Uploaded-Blob(2).png)
+![Uploaded-Blob](images/9-Uploaded-Blob.png)
 
 ### 💡 Interesting Observations
 
