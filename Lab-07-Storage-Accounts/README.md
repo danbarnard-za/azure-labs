@@ -111,7 +111,7 @@ Created a dedicated Resource Group to organize the storage resources.
 | Resource Group | `RG-Storage` |
 | Region | South Africa North |
 
-image/png
+![Resource-Group](images/1-RG-Created)
 
 ## Step 2 – Create the Storage Account
 
