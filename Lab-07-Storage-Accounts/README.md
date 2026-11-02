@@ -205,7 +205,7 @@ The following options were displayed:
 | GZRS | Unavailable | Combines zone redundancy in the primary region with geo-replication. |
 | RA-GZRS | Unavailable | GZRS with read access to the secondary region. |
 
-![RedundancyOptions](images/Redundancy-Options.png)
+![RedundancyOptions](images/5-Redundancy-Options.png)
 
 ### 💡 Interesting Observation
 
