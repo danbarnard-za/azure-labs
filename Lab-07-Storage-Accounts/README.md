@@ -205,7 +205,7 @@ The following options were displayed:
 | GZRS | Unavailable | Combines zone redundancy in the primary region with geo-replication. |
 | RA-GZRS | Unavailable | GZRS with read access to the secondary region. |
 
-image/png
+![RedundancyOptions](images/Redundancy-Options.png)
 
 ### 💡 Interesting Observation
 
@@ -230,7 +230,7 @@ Azure displayed a confirmation warning explaining that:
 - The conversion cannot be stopped once initiated.
 - Storage data remains accessible during conversion, without loss of durability or availability.
 
-image/png
+![Convert-LRS-To-ZRS](images/6-Change-Redundancy.png)
 
 ### Conversion Submitted
 
@@ -243,7 +243,7 @@ To:   Zone-redundant storage (ZRS)
 Status: Submitted for conversion
 ```
 
-image/png
+![Redundancy-Change-Noti](images/7-Redundancy-Change-Noti.png)
 
 ### 💡 Interesting Observation
 
@@ -276,7 +276,7 @@ Created a new container.
 
 The container was successfully created.
 
-image/png
+![Container-Created](images/8-Container-Created.png)
 
 ### 💡 Interesting Observation
 
@@ -311,7 +311,7 @@ The uploaded object was stored as a Block Blob.
 | Lease Status | Unlocked |
 | Lease State | Available |
 
-image/png
+![Uploaded-Blob](images/9-Uploaded-Blob(2).png)
 
 ### 💡 Interesting Observations
 
@@ -329,7 +329,7 @@ Azure automatically encrypts stored data at rest.
 
 **4. Content Type**
 
-Azure identified the uploaded file as `image/png`.
+Azure identified the uploaded file as `8-Container-Created`.
 
 Content type metadata helps applications understand how to handle stored objects.
 
@@ -355,7 +355,7 @@ Azure displayed the following message:
 Archive is not supported for this storage account configuration.
 ```
 
-image/png
+![Change-Blob-Tier](images/11-Change-Tier.png)
 
 ### Change Hot to Cool
 
@@ -369,7 +369,7 @@ The updated properties showed:
 | Access Tier | Hot (Inferred) | Cool |
 | Size | 34.08 KiB | 34.08 KiB |
 
-image/png
+![Tier-Changed](images/12-Tier-Changed.png)
 
 ### 💡 Interesting Observations
 
@@ -415,7 +415,7 @@ Created a new File Share.
 
 The File Share was successfully created.
 
-image/png
+![File-Share-Created](images/13-File-Share.png)
 
 ### 💡 Interesting Observation
 
@@ -448,7 +448,7 @@ Navigating to **Browse** displayed the uploaded file.
 | Authentication Method | Access key |
 | Redundancy | ZRS |
 
-image/png
+![File-Uploaded-Share](images/14-Uploaded-File-Share.png)
 
 ### 💡 Interesting Observations
 
@@ -510,7 +510,7 @@ The purpose was to provide temporary, restricted access without sharing the Stor
 | Expiry | 1 hour after current time |
 | Allowed Protocols | HTTPS only |
 
-image/png
+![Generated-SAS](images/15-Generate-SAS.png)
 
 ### 💡 Interesting Observation
 
@@ -674,75 +674,6 @@ The Overview page displays configuration information, while Browse displays the 
 - SAS tokens provide temporary, permission-limited access without sharing Storage Account keys.
 - SAS URLs must be protected because possession of a valid URL grants its configured permissions.
 - Storage costs depend on redundancy, capacity, transactions, access tier and data transfer.
-
----
-
-# 📌 Key AZ-104 Exam Notes
-
-## Storage Account Types
-
-| Account Type | Purpose |
-|---|---|
-| General-purpose v2 | Supports Blob, Files, Queues and Tables |
-| BlockBlobStorage | Premium block blob workloads |
-| FileStorage | Premium Azure Files workloads |
-| Premium page blobs | High-performance page blob workloads |
-
-## Storage Redundancy
-
-| Redundancy | Key Concept |
-|---|---|
-| LRS | Three copies within one physical location |
-| ZRS | Synchronous replication across availability zones |
-| GRS | LRS in primary region plus asynchronous replication to secondary region |
-| RA-GRS | GRS with read access to secondary region |
-| GZRS | ZRS in primary region plus geo-replication |
-| RA-GZRS | GZRS with read access to secondary region |
-
-## Blob Access Tiers
-
-| Tier | Intended Usage |
-|---|---|
-| Hot | Frequently accessed data |
-| Cool | Infrequently accessed data |
-| Cold | Rarely accessed data |
-| Archive | Offline storage for rarely accessed data |
-
-## Azure Files vs Blob Storage
-
-| Feature | Blob Storage | Azure Files |
-|---|---|---|
-| Storage Model | Object | File |
-| Organization | Containers | File Shares |
-| Access | REST API / SDK | SMB / NFS |
-| Common Use | Unstructured data | Shared file systems |
-
-## Shared Access Signatures (SAS)
-
-| Concept | Key Point |
-|---|---|
-| Purpose | Delegate access to storage resources |
-| Permissions | Read, Write, Delete, List and others depending on resource |
-| Expiry | SAS tokens can have a defined validity period |
-| Protocol | HTTPS can be enforced |
-| Security | Anyone possessing a valid SAS URL can use its granted permissions |
-| Account Key | Does not need to be shared with the SAS recipient |
-
-### Important Distinction
-
-```text
-Storage Account Key
-        ↓
-Broad access to storage account
-
-Shared Access Signature
-        ↓
-Restricted, delegated access
-        ↓
-Specific resource + permissions + validity period
-```
-
----
 
 # References
 
