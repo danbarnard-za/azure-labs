@@ -139,6 +139,7 @@ This makes StorageV2 suitable for general-purpose storage workloads.
 
 ![Creating-Storage-Account](images/2-StorageAccount-Created.png)
 ![Creating-Storage-Account](images/3-StorageAccount-Created.png)
+
 ## Step 3 – Configure Advanced Settings
 
 Configured the Storage Account security settings.
@@ -157,8 +158,6 @@ Disabling anonymous container access prevents containers from being configured f
 
 Storage Account access can still be provided through authorized methods such as account keys, Microsoft Entra ID and SAS tokens.
 
-image/png
-
 ## Step 4 – Configure Networking
 
 Configured the initial networking settings.
@@ -170,15 +169,11 @@ Configured the initial networking settings.
 
 This configuration allows access through the public endpoint, subject to the Storage Account's authentication and authorization requirements.
 
-image/png
-
 ## Step 5 – Review and Deploy
 
 Reviewed the configuration and deployed the Storage Account.
 
 Azure confirmed that provisioning succeeded.
-
-image/png
 
 ### Storage Account Overview
 
@@ -189,7 +184,7 @@ The deployed account showed:
 - South Africa North region.
 - LRS redundancy.
 
-image/png
+![Storage-Account-Overview](images/4-StorageAccount-Overview.png)
 
 ---
 
