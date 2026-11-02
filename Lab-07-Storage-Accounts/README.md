@@ -137,7 +137,7 @@ General-purpose v2 Storage Accounts support multiple Azure storage services, inc
 
 This makes StorageV2 suitable for general-purpose storage workloads.
 
-image/png
+![Creating-Storage-Account](images/2-StorageAccounts-Created)
 
 ## Step 3 – Configure Advanced Settings
 
