@@ -111,7 +111,7 @@ Created a dedicated Resource Group to organise the resources for the managed dis
 | Resource Group | RG-Disks |
 | Region | South Africa North |
 
-![Created-RG](/1-RG-Created.png)
+![Created-RG](images/1-RG-Created.png)
 
 ### Step 2 – Create a Linux Virtual Machine
 
