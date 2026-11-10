@@ -62,7 +62,7 @@ This lab demonstrates:
 ## 🏗️ Architecture
 
 The lab uses a dedicated Resource Group containing an Ubuntu Virtual Machine, an original managed data disk, a snapshot and a restored managed disk.
-
+```
 Azure Subscription
 │
 └── RG-Disks
@@ -82,7 +82,7 @@ Azure Subscription
     └── DiskLab-RestoredDisk01
         │
         └── Created from DiskLab-Snapshot01
-
+```
 ## Managed Disk Configuration
 
 | Setting | Value |
@@ -128,7 +128,7 @@ Deployed a new Ubuntu Linux Virtual Machine because the Linux VM from the previo
 
 The VM was deployed with a new virtual network and public IP configuration.
 
-Linux-VM-Overview
+![Linux-Overview](images/2-VM-Created.png)
 
 ### Step 3 – Create a Managed Data Disk
 
@@ -143,9 +143,11 @@ Created a separate Azure Managed Disk that would be attached to the Linux VM.
 | Storage Type | Standard SSD |
 | Source Type | None |
 
+![Disk-Creation-Page](images/3-Managed-Disk-Created.png)
+
 The disk was created independently of the Virtual Machine and was initially unattached.
 
-Managed-Disk-Overview
+![Disk-Overview](images/4-Disk-Overview.png)
 
 ### Step 4 – Attach the Data Disk
 
@@ -161,7 +163,7 @@ Azure assigned the disk a Logical Unit Number (LUN).
 
 Once attached, the disk became available to the Linux operating system as a block storage device.
 
-Managed-Disk-Attached
+![Disk-Attatched](images/5-Attatching-Disk.png)
 
 ## 🧪 Experiments
 
@@ -172,6 +174,8 @@ Connected to the VM using SSH and ran:
 ```bash
 lsblk
 ```
+
+![lsblk-command](images/6-lsblk.png)
 
 The command displays block devices, including disks and partitions recognised by Linux.
 
@@ -232,6 +236,8 @@ This created the partition:
 └── /dev/sdc1
 ```
 
+![FDisk-Command](images/7-Fdisk.png)
+
 💡 Interesting Observation
 
 A managed disk and a partition are different things.
@@ -290,6 +296,8 @@ df -h
 
 The output confirmed that the 32 GB partition was mounted at `/mnt/data`.
 
+![Mounted-Disk](images/8-mounted-disk.png)
+
 💡 Interesting Observation
 
 Partitioning, formatting and mounting are three separate operations:
@@ -322,7 +330,7 @@ Azure Managed Disk Lab 08
 
 The test confirmed that Linux could successfully write data to and read data from the managed disk.
 
-Managed-Disk-Mounted
+![Disk-Test](images/9-Disk-Test.png)
 
 ### Experiment 6 – Create a Managed Disk Snapshot
 
@@ -355,7 +363,7 @@ It can subsequently be used as the source for creating another managed disk.
 
 Stopping the VM before the snapshot helped ensure that no further writes were being made to the data disk during the operation.
 
-Snapshot-Overview
+![Snapshot-Overview](images/10-Snapshot-Overview.png)
 
 ### Experiment 7 – Create a Managed Disk from the Snapshot
 
@@ -386,7 +394,7 @@ A snapshot is not normally attached directly to a VM as a writable data disk.
 
 Instead, a new managed disk is created from the snapshot and then attached to a Virtual Machine.
 
-Restored-Disk-Overview
+![Restored-Disk](images/11-Restored-Disk.png)
 
 ### Experiment 8 – Attach the Restored Disk
 
@@ -415,6 +423,8 @@ The restored 32 GB disk appeared as `/dev/sda`, while the operating system disk 
 The 16 GB resource disk appeared as `/dev/sdc`.
 
 This reinforced the importance of identifying disks by their size, filesystem and other properties rather than assuming that device names remain constant.
+
+![Attatched-Disk](images/12-Restored-Disk-Attatched.png)
 
 ### Experiment 9 – Verify Snapshot Recovery
 
@@ -471,7 +481,7 @@ The snapshot preserved the original partition structure, ext4 filesystem and fil
 
 Creating a new managed disk from the snapshot allowed the original data to be recovered without modifying the original managed disk.
 
-Snapshot-Recovery-Verified
+![Testing-Restored-Disk](images/13-Testing-Restored-Disk.png)
 
 ### Experiment 10 – Compare Managed Disk Snapshots and Azure Backup
 
