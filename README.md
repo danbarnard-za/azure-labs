@@ -52,7 +52,7 @@ This repository will cover:
 | [Lab 05 – Azure Bastion](Lab-05-Azure-Bastion/) | ✅ | Securely administer Linux and Windows VMs without exposing RDP or SSH to the Internet. |
 | [Lab 06 – VNet Peering](Lab-06-VNet-Peering/) | ✅ | Connect two Virtual Networks, verify communication, and understand peering limitations. |
 | [Lab 07 – Storage Accounts](Lab-07-Storage-Accounts/) | ✅ | Deploy Storage Accounts, configure redundancy, explore Blob Storage, Azure Files, and SAS tokens. |
-| Lab 08 – Managed Disks & Snapshots | 🚧 Planned | Create managed disks, attach data disks, create snapshots, and compare snapshots with Azure Backup. |
+| [Lab 08 – Managed Disks & Snapshots](Lab-08-Managed-Disks-and-Snapshots/) | ✅ | Create managed disks, attach data disks, create snapshots, and compare snapshots with Azure Backup. |
 | Lab 09 – Recovery Services Vault & Azure Backup | 🚧 Planned | Configure Azure Backup, create recovery points, and restore protected resources. |
 | Lab 10 – Availability Sets & Availability Zones | 🚧 Planned | Deploy highly available VMs and understand fault domains, update domains, and zones. |
 | Lab 11 – Azure Load Balancer | 🚧 Planned | Configure a Layer 4 Load Balancer, backend pools, health probes, and balancing rules. |
