@@ -124,7 +124,6 @@ Deployed a new Ubuntu Linux Virtual Machine because the Linux VM from the previo
 | Region | South Africa North |
 | Operating System | Ubuntu Server 24.04 LTS |
 | Authentication | SSH Public Key |
-| Username | azureuser |
 
 The VM was deployed with a new virtual network and public IP configuration.
 
